@@ -1,0 +1,16 @@
+window:
+  padding:
+    x: 1
+    y: 1
+  dynamic_padding: true
+
+shell:
+  program: /bin/fish
+
+font:
+  size: 8
+
+cursor:
+  style:
+    shape: Beam
+    blinking: On
