@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
-polybar-msg cmd quit
-
-echo "---" | tee -a /tmp/polybar-main.log
-polybar main 2>&1 | tee -a /tmp/polybar-main.log & disown
-echo "launched barsi"
+DIR="$HOME/.config/polybar"
+killall -q polybar
+while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
+polybar -q main -c "$DIR"/config.ini
